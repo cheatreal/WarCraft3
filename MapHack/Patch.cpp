@@ -32,33 +32,47 @@ DWORD Patch::GetProcessId()
 
 DWORD Patch::GetDllBase(DWORD pid)
 {
-	HANDLE hSnapshot = 0;
-	MODULEENTRY32 me32;
+	HANDLE hSnap;
+	MODULEENTRY32 xModule;
+	hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pid); 
+	xModule.dwSize = sizeof(MODULEENTRY32);
 
-	if (pid)
+	if (Module32First(hSnap, &xModule)) 
 	{
-		hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pid);
-		me32.dwSize = sizeof(MODULEENTRY32);
-		if (Module32First(hSnapshot, &me32))
+		
+		if (lstrcmpi (xModule.szModule, (LPCSTR)Patch::DllName) == 0) 
 		{
-			do
+			CloseHandle(hSnap); 
+			return (DWORD)xModule.modBaseAddr; 
+		}
+
+		while (Module32Next(hSnap, &xModule)) 
+		{
+			if (lstrcmpi (xModule.szModule, (LPCSTR)Patch::DllName) == 0) 
 			{
-				if (strcmp(DllName, me32.szModule) == 0)
-				{
-					CloseHandle(hSnapshot);
-					return (DWORD)me32.modBaseAddr;
-				}
-			} while (Module32Next(hSnapshot, &me32));
+				CloseHandle(hSnap); 
+
+				return (DWORD)xModule.modBaseAddr; 
+
+			}
 		}
 	}
-	CloseHandle(hSnapshot);
+
+	CloseHandle(hSnap); 
+
 	return 0;
+
 }
 
-BOOL Patch::PatchCode(HANDLE hProc, DWORD Base, DWORD offset,LPCVOID opcode, DWORD bytes)
+BOOL Patch::PatchCode(HANDLE hProc, DWORD Base, DWORD offset,LPCVOID opcode, DWORD bytes, PBYTE pOrgBytes)
 {
 	DWORD result;
-	WriteProcessMemory(hProc, reinterpret_cast<LPVOID>(Base +  offset), opcode, bytes, &result);
+	 
+	// 원래 코드 
+	//memcpy(pOrgBytes, Base+offset, bytes);
+
+
+	WriteProcessMemory(hProc, reinterpret_cast<LPVOID>(Base  + offset),(LPCVOID)opcode, bytes, &result);
 	if (result == 0)
 	{
 		return false;
