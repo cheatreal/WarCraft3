@@ -12,6 +12,6 @@ class Patch
 		Patch(char* ProcName, char* DllName);
 		DWORD GetProcessId();
 		DWORD GetDllBase(DWORD pid);
-		BOOL PatchCode(HANDLE hProc, DWORD Base, DWORD offset, LPCVOID opcode, DWORD bytes);
+		BOOL PatchCode(HANDLE hProc, DWORD Base, DWORD offset, LPCVOID opcode, DWORD bytes, PBYTE pOrgBytes);
 
-};
+}; 
