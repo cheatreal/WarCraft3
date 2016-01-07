@@ -5,7 +5,7 @@
 
 DWORD main()
 {
-	HANDLE hProc;
+	HANDLE hProc = 0;
 	DWORD DllBase = 0;
 	DWORD pid = 0;
 	Patch wc3("war3.exe", "game.dll");
@@ -13,30 +13,33 @@ DWORD main()
 	pid = wc3.GetProcessId();
 	if (pid == 0)
 	{
-		std::cout << "War3 ¸øÃ£À½ »©¾Ö¾Ö¾×" << std::endl;
+		std::cout << "War3 ëª»ì°¾ìŒ ë¹¼ì• ì• ì•¡" << std::endl;
 		return 0;
 	}
+	std::cout << "PID : " << pid << std::endl;
 
 	DllBase = wc3.GetDllBase(pid);
 	if (DllBase == 0)
 	{
-		std::cout << "Dll »©¾Ö¾Ö¾Ö¾×" << std::endl;
+		std::cout << "Dll ë¹¼ì• ì• ì• ì•¡" << std::endl;
 		return 0;
 	}
+	std::cout << "DLL Base Addr : " << DllBase << std::endl;
 
 	hProc = OpenProcess(PROCESS_ALL_ACCESS, false, pid);
-	if (hProc)
+	if (!hProc)
 	{
-		std::cout << "ÇÁ·Î¼¼½º »©¾Ö¾Ö¾×" << std::endl;
+		std::cout << "í”„ë¡œì„¸ìŠ¤ ë¹¼ì• ì• ì•¡" << std::endl;
 	}
 	/*
 		Game.dll+3a159b
 		Game.dll+3a14bc
 	*/
-	if (wc3.PatchCode(hProc, DllBase, 0x3a159b, "\x90", 2) &&
-		wc3.PatchCode(hProc, DllBase, 0x3a14bc, "\x90", 2))
+	if (wc3.PatchCode(hProc, DllBase, 0x3a159b, "\x90\x90", 2, 0) 
+		/*&& wc3.PatchCode(hProc, DllBase, 0x3a14bc, "\x90\x90", 2)*/
+		)
 	{
-		std::cout << "ÆÐÄ¡ ¼º°ø" << std::endl;
+		std::cout << "íŒ¨ì¹˜ ì„±ê³µ" << std::endl;
 	}
 	getch();
-}
+} 
