@@ -30,52 +30,51 @@ DWORD Patch::GetProcessId()
 	return dwPID;
 }
 
+
+
 DWORD Patch::GetDllBase(DWORD pid)
 {
-	HANDLE hSnap;
-	MODULEENTRY32 xModule;
-	hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pid); 
+	HANDLE hSnap = 0;
+	MODULEENTRY32 xModule = { 0 };
+	hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pid);
 	xModule.dwSize = sizeof(MODULEENTRY32);
 
-	if (Module32First(hSnap, &xModule)) 
+	if (Module32First(hSnap, &xModule))
 	{
-		
-		if (lstrcmpi (xModule.szModule, (LPCSTR)Patch::DllName) == 0) 
+
+		if (lstrcmpi(xModule.szModule, (LPCSTR)Patch::DllName) == 0)
 		{
-			CloseHandle(hSnap); 
-			return (DWORD)xModule.modBaseAddr; 
+			CloseHandle(hSnap);
+			return (DWORD)xModule.modBaseAddr;
 		}
 
-		while (Module32Next(hSnap, &xModule)) 
+		while (Module32Next(hSnap, &xModule))
 		{
-			if (lstrcmpi (xModule.szModule, (LPCSTR)Patch::DllName) == 0) 
+			if (lstrcmpi(xModule.szModule, (LPCSTR)Patch::DllName) == 0)
 			{
-				CloseHandle(hSnap); 
+				CloseHandle(hSnap);
 
-				return (DWORD)xModule.modBaseAddr; 
+				return (DWORD)xModule.modBaseAddr;
 
 			}
 		}
+
+
+
+		CloseHandle(hSnap);
+
+		return 0;
 	}
-
-	CloseHandle(hSnap); 
-
-	return 0;
-
 }
 
-BOOL Patch::PatchCode(HANDLE hProc, DWORD Base, DWORD offset,LPCVOID opcode, DWORD bytes, PBYTE pOrgBytes)
+BOOL Patch::PatchCode(HANDLE hProc, DWORD Base, DWORD offset,LPCVOID opcode, DWORD bytes)
 {
-	DWORD result;
-	 
-	// 원래 코드 
-	//memcpy(pOrgBytes, Base+offset, bytes);
+	SIZE_T * result = NULL;
 
-
-	WriteProcessMemory(hProc, reinterpret_cast<LPVOID>(Base  + offset),(LPCVOID)opcode, bytes, &result);
+	WriteProcessMemory(hProc, reinterpret_cast<LPVOID>(Base + offset),(LPCVOID)opcode, bytes, result);
 	if (result == 0)
 	{
-		return false;
+		return true;
 	}
-	return true;
+	return false;
 }
