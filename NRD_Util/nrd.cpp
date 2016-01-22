@@ -1,15 +1,65 @@
-#include "hook.h"
-#pragma warning(disable:4996)
+#include "WarCraft.h"
 
-DWORD base;
+//map<DWORD64, tuple<DWORD, DWORD >> normal;
+map<DWORD64, DWORD> normal;
 
-DWORD64 normal_table[6] = { 0x86EDA8A3EB9882EB,0x86ED88A7EBBC95EC, 0x9DEBA0BFECAC82EC, 0x86ED80B6EBB4B9EC, 0xA6EB8C86ECAC82EC, 0xBCECA48AECAC82EC };
-DWORD64 normal_table2[3] = {0x3A20B0A6EBB4B9EC,0x3A2080B6EB9495EC, 0x3A20B49DECAC82EC };
+DWORD64 normal_table[9] = { NARUTO, YAMATO, SAKURA, KABUTO, SASORI, SASUKE, KARIN,AMBU, SAI };
+char normal_name[9][9] = {"naruto", "yamto", "sakura", "kabuto", "sasori", "sasuke", "karin", "ambu", "sai"};
 
-unsigned char normal_name[6][7] = { "Naruto", "Yamato", "Sakura", "Kabuto", "Sasori", "Sasuke" };
-unsigned char normal_name2[3][7] = { "Karin", "Ambu", "Sai" };
+inline const char * N0(DWORD* point)
+{
+	return (const char*)(*point + 0xd);
+}
 
-void normal(DWORD *point)
+inline const char * N1(DWORD* point)
+{
+	return (const char*)(*point + 0xa);
+}
+
+void unitMapView()
+{
+	printf("[  MAP  ]\n");
+	for (int i = 0; i < 9; i++)
+	{
+		printf("%s : %d\n", normal_name[i], normal[normal_table[i]]);
+	}
+}
+
+void unitMapDel()
+{
+	normal.clear();
+}
+
+void unitMapSet()
+{
+	for (int i = 0; i < 9; i++)
+	{
+			normal[normal_table[i]] = 0;
+	}
+
+}
+
+DWORD unitCheckGroup(DWORD64 *check)
+{
+	for (int i = 0; i < 9; i++)
+	{
+
+		if (*check == normal_table[i])
+		{
+			if (i < 6)
+			{
+				return 0;
+			}
+			else
+			{
+				return 1;
+			}
+		}
+	}
+	return -1;
+}
+
+void unitNormalMagic(DWORD *point)
 {
 	DWORD64 *check;
 
@@ -17,75 +67,47 @@ void normal(DWORD *point)
 	point = (DWORD*)((*point) + 0x1c);
 	check = (DWORD64 *)*point;
 
-	for (int i = 0; i < 6; i++)
+	switch (unitCheckGroup(check))
 	{
-		if (normal_table[i] == *check)
-		{
-			point = (DWORD *)((*point + 0xd));
-			printf("%s : %s \n", normal_name[i], point);
+		case 0:
+			normal[*check] = atoi(N0(point));
+			break;
+		case 1:
+			normal[*check] = atoi(N1(point));
+			break;
+		default:
 			return;
-		}
 	}
 
-	for (int i = 0; i < 3; i++)
-	{
-		if (normal_table2[i] == *check)
-		{
-			point = (DWORD *)((*point + 0xa));
-			printf("%s : %s \n", normal_name2[i], point);
-			return;
-		}
-	}
-
-
-
+	return;
 }
-__declspec(naked)  void nrdhook()
-{
 
+__declspec(naked) void unitHookFunc()
+{
+	
 	DWORD *point;
 	__asm
-	{	
-		mov eax, [esp+0x24]
+	{
+		mov eax, [esp + 0x24]
 		mov point, eax
 		pushad
 	}
 
-	normal(point);
+	unitNormalMagic(point);
 
 	__asm
 	{
 		popad
 		mov eax, point
 		push eax
-		mov eax, base
+		mov eax, DllBase
 		add eax, 0x3cb915
 		jmp eax
 	}
-
 }
 
-void Injection()
+void unitHook()
 {
 	Hook hc;
-
-	base = (DWORD)GetModuleHandleA("Game.dll");
-	printf("DLL Base : %x \n", base);
-	hc.AddrHook(base + 0x3cb910 ,(PROC)nrdhook);
+	hc.AddrHook(DllBase + 0x3cb910, (PROC)unitHookFunc);
 }
-
-BOOL APIENTRY DllMain(HMODULE hModule,
-	DWORD  ul_reason_for_call,
-	LPVOID lpReserved
-	)
-{
-	switch (ul_reason_for_call)
-	{
-	case DLL_PROCESS_ATTACH:
-		AllocConsole();
-		freopen("CONOUT$", "wt", stdout);
-		HANDLE hInjectionThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Injection, NULL, 0, NULL);
-	}
-	return TRUE;
-}
-
