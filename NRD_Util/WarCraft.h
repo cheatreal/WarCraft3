@@ -1,5 +1,5 @@
 ﻿#pragma once
-#pragma comment(lib,"version.lib")
+#pragma comment(lib,"Imm32.lib")
 #pragma warning(disable:4996)
 
 #include <Windows.h>
@@ -9,14 +9,15 @@
 #include <iostream>
 #include <process.h>
 
+
 #include "nrd.h"
 #include "HotKey.h"
 #include "hook.h"
-#include "Normal.h"
+#include "unit.h"
+#include "keyboard.h"
 
 
 using namespace std;
-
 
 
 const DWORD DllBase = (DWORD)GetModuleHandleA("Game.dll");

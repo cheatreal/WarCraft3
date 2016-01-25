@@ -1,42 +1,56 @@
 #include "WarCraft.h"
 
 //map<DWORD64, tuple<DWORD, DWORD >> normal;
-map<DWORD64, DWORD> normal;
+
+map<DWORD64, tuple<DWORD, DWORD>> normal;
+map<DWORD64, tuple<DWORD, DWORD>> magic;
 
 DWORD64 normal_table[9] = { NARUTO, YAMATO, SAKURA, KABUTO, SASORI, SASUKE, KARIN,AMBU, SAI };
-char normal_name[9][9] = {"naruto", "yamto", "sakura", "kabuto", "sasori", "sasuke", "karin", "ambu", "sai"};
+char normal_name[9][9] = { "naruto", "yamto", "sakura", "kabuto", "sasori", "sasuke", "karin", "ambu", "sai" };
+DWORD64 normal_offset_table[2] = { 0xd, 0xa };
 
-inline const char * N0(DWORD* point)
-{
-	return (const char*)(*point + 0xd);
-}
-
-inline const char * N1(DWORD* point)
-{
-	return (const char*)(*point + 0xa);
-}
+DWORD64 magic_table[8] = { JIRAIYA, TSUNADE, OROCHIMARU, JUUGO, TEMARI, ZETSU,SASUKE1, CHOUJI };
+char magic_name[8][14] = { "JIRAIYA", "TSUNADE", "OROCHIMARU", "JUUGO", "TEMARI", "ZETSU","SASUKE1", "CHOUJI" };
+DWORD64 magic_offset_table[8] = { JIRAIYA_COUNT, TSUNADE_COUNT, OROCHIMARU_COUNT, JUUGO_COUNT, TEMARI_COUNT, ZETSU_COUNT,SASUKE1_COUNT, CHOUJI_COUNT };
 
 void unitMapView()
 {
 	printf("[  MAP  ]\n");
 	for (int i = 0; i < 9; i++)
 	{
-		printf("%s : %d\n", normal_name[i], normal[normal_table[i]]);
+		printf("%s : %d\n", normal_name[i], get<0>(normal[normal_table[i]]));
+	}
+	for (int i = 0; i <8; i++)
+	{
+		printf("%s : %d\n", magic_name[i], get<0>(magic[magic_table[i]]));
 	}
 }
 
 void unitMapDel()
 {
 	normal.clear();
+	magic.clear();
 }
 
 void unitMapSet()
 {
 	for (int i = 0; i < 9; i++)
 	{
-			normal[normal_table[i]] = 0;
+		if (i < 6)
+		{
+			normal[normal_table[i]] = make_tuple(0, normal_offset_table[0]);
+
+		}
+		else
+		{
+			normal[normal_table[i]] = make_tuple(0, normal_offset_table[1]);
+		}
 	}
 
+	for (int i = 0; i < 8; i++)
+	{
+		magic[magic_table[i]] = make_tuple(0, magic_offset_table[i]);
+	}
 }
 
 DWORD unitCheckGroup(DWORD64 *check)
@@ -46,14 +60,15 @@ DWORD unitCheckGroup(DWORD64 *check)
 
 		if (*check == normal_table[i])
 		{
-			if (i < 6)
-			{
-				return 0;
-			}
-			else
-			{
-				return 1;
-			}
+			return 1;
+		}
+	}
+	for (int i = 0; i < 8; i++)
+	{
+
+		if (*(DWORD64 *)((DWORD)check + 0xa) == magic_table[i])
+		{
+			return 2;
 		}
 	}
 	return -1;
@@ -69,16 +84,17 @@ void unitNormalMagic(DWORD *point)
 
 	switch (unitCheckGroup(check))
 	{
-		case 0:
-			normal[*check] = atoi(N0(point));
-			break;
-		case 1:
-			normal[*check] = atoi(N1(point));
-			break;
-		default:
-			return;
+	case 1:
+		normal[*check] = make_tuple(atoi((const char*)(*point + get<1>(normal[*check]))), get<1>(normal[*check]));
+		break;
+	case 2:
+		check = (DWORD64 *)((DWORD)check + 0xa);
+		magic[*check] = make_tuple(atoi((const char*)(*point + (get<1>(magic[*check])))), get<1>(magic[*check]));
+		break;
+	default:
+		return;
 	}
-
+	
 	return;
 }
 
