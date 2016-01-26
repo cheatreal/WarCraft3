@@ -11,8 +11,8 @@ void HotKeyRoutine()
 			Sleep(1000); 
 			unitHook();
 			printf("Game\n");
-			WarCraftPrintText("|CFFFAFF21Status : |R   |CFFFF0000ON|R");
-			WarCraftPrintText("|CFFFAFF21blog.naver.com/cheatreal|R");
+			WarCraftPrintText(u8"|CFFFAFF21Status : |R   |CFFFF0000ON|R");
+			WarCraftPrintText(u8"|CFFFAFF21blog.naver.com/cheatreal|R");
 			unitMapSet();
 			count = FALSE;
 		}
@@ -31,7 +31,7 @@ void HotKeyRoutine()
 
 		if (GetAsyncKeyState(VIEW))
 		{
-
+			setUnique();
 			//keyNormal();
 			Sleep(200);
 			unitMapView();

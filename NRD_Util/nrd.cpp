@@ -13,17 +13,28 @@ DWORD64 magic_table[8] = { JIRAIYA, TSUNADE, OROCHIMARU, JUUGO, TEMARI, ZETSU,SA
 char magic_name[8][14] = { "JIRAIYA", "TSUNADE", "OROCHIMARU", "JUUGO", "TEMARI", "ZETSU","SASUKE1", "CHOUJI" };
 DWORD64 magic_offset_table[8] = { JIRAIYA_COUNT, TSUNADE_COUNT, OROCHIMARU_COUNT, JUUGO_COUNT, TEMARI_COUNT, ZETSU_COUNT,SASUKE1_COUNT, CHOUJI_COUNT };
 
-void unitMapView()
+DWORD getNormalValue(DWORD64 normal_check)
 {
+	return get<0>(normal[normal_check]);
+}
+
+DWORD getMagicValue(DWORD64 magic_check)
+{
+	return get<0>(magic[magic_check]);
+}
+
+void unitMapView()
+{/*
 	printf("[  MAP  ]\n");
 	for (int i = 0; i < 9; i++)
 	{
+
 		printf("%s : %d\n", normal_name[i], get<0>(normal[normal_table[i]]));
 	}
 	for (int i = 0; i <8; i++)
 	{
 		printf("%s : %d\n", magic_name[i], get<0>(magic[magic_table[i]]));
-	}
+	}*/
 }
 
 void unitMapDel()
@@ -51,6 +62,27 @@ void unitMapSet()
 	{
 		magic[magic_table[i]] = make_tuple(0, magic_offset_table[i]);
 	}
+}
+
+DWORD checkUnitType(DWORD64 checkUnit)
+{
+	for (int i = 0; i < 9; i++)
+	{
+
+		if (checkUnit == normal_table[i])
+		{
+			return 1;
+		}
+	}
+	for (int i = 0; i < 8; i++)
+	{
+
+		if (checkUnit== magic_table[i])
+		{
+			return 2;
+		}
+	}
+	return -1;
 }
 
 DWORD unitCheckGroup(DWORD64 *check)
