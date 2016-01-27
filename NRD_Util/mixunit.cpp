@@ -1,7 +1,7 @@
 #include "WarCraft.h"
 
-mixunit::mixunit(DWORD count, ...)
-	: count(count)
+mixunit::mixunit(char* unitName, DWORD count, ...)
+	: unitName(unitName), count(count)
 {
 	unit_table = new DWORD64[count];
 	va_list list;
@@ -24,9 +24,14 @@ void mixunit::view()
 	}
 }
 
+char * mixunit::getUnitName()
+{
+	return unitName;
+}
+
 DWORD mixunit::getCost()
 {
-	cost = 0;
+	DWORD cost = 0;
 	for (DWORD i = 0; i < count; i++)
 	{
 		int subResult = 0;

@@ -9,6 +9,7 @@ void HotKeyRoutine()
 		{
 			unitMapDel();
 			Sleep(1000); 
+			setUnique();
 			unitHook();
 			printf("Game\n");
 			WarCraftPrintText(u8"|CFFFAFF21Status : |R   |CFFFF0000ON|R");
@@ -21,20 +22,10 @@ void HotKeyRoutine()
 			count = TRUE;
 		}
 
-		if (GetAsyncKeyState(VK_F1))
+		if (!GameCheck() && GetAsyncKeyState(VIEW))
 		{
-			system("cls");
-			while (GetAsyncKeyState(VK_F1))
-				Sleep(100);
-
-		}
-
-		if (GetAsyncKeyState(VIEW))
-		{
-			setUnique();
 			//keyNormal();
-			Sleep(200);
-			unitMapView();
+		    createUnique();
 			while (GetAsyncKeyState(VIEW))
 				Sleep(100);
 

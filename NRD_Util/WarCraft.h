@@ -5,8 +5,10 @@
 #include <Windows.h>
 #include <stdio.h>
 #include <map>
+#include <vector>
 #include <string>
 #include <iostream>
+#include <algorithm>
 #include <process.h>
 
 
@@ -15,7 +17,8 @@
 #include "hook.h"
 #include "unit.h"
 #include "keyboard.h"
-
+#include "mixunit.h"
+#include "unique.h"
 
 using namespace std;
 
@@ -30,7 +33,7 @@ inline BOOL GameCheck()
 {
 	return *(DWORD *)(DllBase + 0xAB5738) == 4;
 }
-inline VOID WarCraftPrintText(CHAR *Text)
+inline VOID WarCraftPrintText(CONST CHAR *Text)
 {
 	DWORD Class = DllBase + 0xAB4F80;
 	DWORD Screen = DllBase + 0x2F8E40;
@@ -48,3 +51,4 @@ inline VOID WarCraftPrintText(CHAR *Text)
 		CALL Screen;
 	}
 }
+

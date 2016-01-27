@@ -23,8 +23,9 @@ DWORD getMagicValue(DWORD64 magic_check)
 	return get<0>(magic[magic_check]);
 }
 
+//debug function
 void unitMapView()
-{/*
+{
 	printf("[  MAP  ]\n");
 	for (int i = 0; i < 9; i++)
 	{
@@ -34,7 +35,7 @@ void unitMapView()
 	for (int i = 0; i <8; i++)
 	{
 		printf("%s : %d\n", magic_name[i], get<0>(magic[magic_table[i]]));
-	}*/
+	}
 }
 
 void unitMapDel()
@@ -87,6 +88,11 @@ DWORD checkUnitType(DWORD64 checkUnit)
 
 DWORD unitCheckGroup(DWORD64 *check)
 {
+	if ((*(DWORD64 *)((DWORD)check + 0xa) == SASUKE))
+	{
+		return 0;
+	}
+
 	for (int i = 0; i < 9; i++)
 	{
 
@@ -100,10 +106,11 @@ DWORD unitCheckGroup(DWORD64 *check)
 
 		if (*(DWORD64 *)((DWORD)check + 0xa) == magic_table[i])
 		{
-			return 2;
+				return 2;
 		}
 	}
-	return -1;
+
+	return 9;
 }
 
 void unitNormalMagic(DWORD *point)
@@ -116,6 +123,12 @@ void unitNormalMagic(DWORD *point)
 
 	switch (unitCheckGroup(check))
 	{
+	case 0:
+		if(*(check+1) == SASUKE1_CHECK)
+		{
+			magic[SASUKE1] = make_tuple(atoi((const char*)(*point + (get<1>(magic[SASUKE1])))), get<1>(magic[SASUKE1]));
+		}
+		break;
 	case 1:
 		normal[*check] = make_tuple(atoi((const char*)(*point + get<1>(normal[*check]))), get<1>(normal[*check]));
 		break;
