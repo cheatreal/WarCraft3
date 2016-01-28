@@ -3,15 +3,17 @@
 void HotKeyRoutine()
 {
 	BOOL count = TRUE;
+	char * nrdMapCheck = 0;
 	while (true)
 	{
+		printf("%d\n", *(DWORD *)(DllBase + 0xAB5738));
 		if (GameCheck() && count)
 		{
 			unitMapDel();
 			Sleep(1000); 
 			setUnique();
 			unitHook();
-			printf("Game\n");
+			nrdMapCheck = strstr(getMapName(), "15-12-20-nrd3.8f-fix3");
 			WarCraftPrintText(u8"|CFFFAFF21Status : |R   |CFFFF0000ON|R");
 			WarCraftPrintText(u8"|CFFFAFF21blog.naver.com/cheatreal|R");
 			unitMapSet();
@@ -22,10 +24,10 @@ void HotKeyRoutine()
 			count = TRUE;
 		}
 
-		if (!GameCheck() && GetAsyncKeyState(VIEW))
+		if ((GameCheck()  || inGameCheck()) && nrdMapCheck && GetAsyncKeyState(VIEW))
 		{
 			//keyNormal();
-		    createUnique();
+			createUnique();
 			while (GetAsyncKeyState(VIEW))
 				Sleep(100);
 

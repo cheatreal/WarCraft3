@@ -26,13 +26,22 @@ using namespace std;
 const DWORD DllBase = (DWORD)GetModuleHandleA("Game.dll");
 const HWND  hWnd = FindWindowA("Warcraft III", NULL);
 
+inline char* getMapName()
+{
+	return (char *)(DllBase + 0xAAE7C0);
+}
 
-DWORD WarCraftVersion();
-//what...
 inline BOOL GameCheck()
 {
 	return *(DWORD *)(DllBase + 0xAB5738) == 4;
 }
+
+inline BOOL inGameCheck()
+{
+	return *(DWORD *)(DllBase + 0xAB5738) == 1;
+}
+
+
 inline VOID WarCraftPrintText(CONST CHAR *Text)
 {
 	DWORD Class = DllBase + 0xAB4F80;
@@ -52,3 +61,16 @@ inline VOID WarCraftPrintText(CONST CHAR *Text)
 	}
 }
 
+inline void WarCraftPrintTextEx(char *szText, ...)
+{
+	char szTextEx[8192] = { NULL };
+
+	va_list Args;
+	va_start(Args, szText);
+	vsprintf_s(szTextEx, szText, Args);
+	va_end(Args);
+
+	WarCraftPrintText(szTextEx);
+}
+
+DWORD WarCraftVersion();

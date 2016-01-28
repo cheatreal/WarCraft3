@@ -1,22 +1,7 @@
 #include "WarCraft.h"
 
-
-
 mixunit *mixunits[UNIQUE_COUNT];
-
-void WarCraftPrintTextEx(char *szText, ...)
-{
-	char szTextEx[8192] = { NULL };
-
-	va_list Args;
-	va_start(Args, szText);
-	vsprintf_s(szTextEx, szText, Args);
-	va_end(Args);
-
-	WarCraftPrintText(szTextEx);
-}
-
-
+extern GAME_ClearTextMessages ClearTextMessages;
 void setUnique()
 {
 	//sai_unique.view();
@@ -81,11 +66,13 @@ void createUnique()
 	vector<pair<DWORD, DWORD> > vec(sortMap.begin(), sortMap.end());
 
 	sort(vec.begin(), vec.end(), compare_pair_second<std::less>());
-	
+
 	for (int i = 0; i < 3; i++)
 	{
-		WarCraftPrintTextEx("[!]%s : %d\n", mixunits[vec[i].first]->getUnitName(), mixunits[vec[i].first]->getCost());
-		Sleep(1000);
+		Sleep(1500);
+		WarCraftPrintTextEx("[%d]%s", i+1, mixunits[vec[i].first]->getUnitName());
+		mixunits[vec[i].first]->viewMaterial();
+		
 	}
 
 }
