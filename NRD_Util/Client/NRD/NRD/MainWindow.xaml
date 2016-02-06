@@ -7,7 +7,7 @@
         xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" x:Class="NRD.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="300"
-        AllowsTransparency="True"  WindowStyle ="None" Background="Black">
+        AllowsTransparency="True"  WindowStyle ="None" Background="{x:Null}">
 
     <Window.Resources>
         <Storyboard x:Key="startProgressRingStoryBoard" RepeatBehavior="Forever">
