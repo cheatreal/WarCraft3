@@ -1,0 +1,223 @@
+﻿  hook.cpp
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4311: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 포인터가 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4302: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(31): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'char *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(36): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(41): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(51): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2146: 구문 오류: ';'이(가) 'dwColor' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2146: 구문 오류: ';'이(가) 'Text' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'mov': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2146: 구문 오류: ';'이(가) 'ecx' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'ecx': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C3260: ';': 람다 본문 전에 예상치 않은 토큰을 건너뜁니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(69): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(70): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(76): error C2146: 구문 오류: ';'이(가) 'DWORD' 식별자 앞에 없습니다.
+hook.cpp(6): error C2601: 'Hook::cHook': 지역 함수 정의가 잘못되었습니다.
+hook.cpp(41): error C2601: 'Hook::UncHook': 지역 함수 정의가 잘못되었습니다.
+hook.cpp(62): error C2601: 'Hook::AddrHook': 지역 함수 정의가 잘못되었습니다.
+hook.cpp(90): fatal error C1004: 예기치 않은 파일의 끝이 나타났습니다.
+  HotKey.cpp
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4311: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 포인터가 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4302: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(31): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'char *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(36): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(41): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(51): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2146: 구문 오류: ';'이(가) 'dwColor' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2146: 구문 오류: ';'이(가) 'Text' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'mov': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2146: 구문 오류: ';'이(가) 'ecx' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'ecx': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C3260: ';': 람다 본문 전에 예상치 않은 토큰을 건너뜁니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(69): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(70): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(76): error C2146: 구문 오류: ';'이(가) 'DWORD' 식별자 앞에 없습니다.
+HotKey.cpp(4): error C2601: 'HotKeyRoutine': 지역 함수 정의가 잘못되었습니다.
+HotKey.cpp(38): fatal error C1004: 예기치 않은 파일의 끝이 나타났습니다.
+  keyboard.cpp
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4311: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 포인터가 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4302: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(31): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'char *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(36): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(41): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(51): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2146: 구문 오류: ';'이(가) 'dwColor' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2146: 구문 오류: ';'이(가) 'Text' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'mov': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2146: 구문 오류: ';'이(가) 'ecx' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'ecx': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C3260: ';': 람다 본문 전에 예상치 않은 토큰을 건너뜁니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(69): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(70): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(76): error C2146: 구문 오류: ';'이(가) 'DWORD' 식별자 앞에 없습니다.
+keyboard.cpp(4): error C2601: 'keyNormal': 지역 함수 정의가 잘못되었습니다.
+keyboard.cpp(24): fatal error C1004: 예기치 않은 파일의 끝이 나타났습니다.
+  main.cpp
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4311: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 포인터가 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4302: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(31): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'char *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(36): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(41): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(51): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2146: 구문 오류: ';'이(가) 'dwColor' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2146: 구문 오류: ';'이(가) 'Text' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'mov': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2146: 구문 오류: ';'이(가) 'ecx' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'ecx': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C3260: ';': 람다 본문 전에 예상치 않은 토큰을 건너뜁니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(69): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(70): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(76): error C2146: 구문 오류: ';'이(가) 'DWORD' 식별자 앞에 없습니다.
+main.cpp(7): error C2601: 'DllMain': 지역 함수 정의가 잘못되었습니다.
+main.cpp(18): fatal error C1004: 예기치 않은 파일의 끝이 나타났습니다.
+  mixunit.cpp
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4311: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 포인터가 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4302: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(31): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'char *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(36): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(41): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(51): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2146: 구문 오류: ';'이(가) 'dwColor' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2146: 구문 오류: ';'이(가) 'Text' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'mov': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2146: 구문 오류: ';'이(가) 'ecx' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'ecx': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C3260: ';': 람다 본문 전에 예상치 않은 토큰을 건너뜁니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(69): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(70): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(76): error C2146: 구문 오류: ';'이(가) 'DWORD' 식별자 앞에 없습니다.
+mixunit.cpp(3): error C2062: 예기치 않은 'char' 형식입니다.
+mixunit.cpp(5): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+mixunit.cpp(6): error C2065: 'unit_table': 선언되지 않은 식별자입니다.
+mixunit.cpp(6): error C2440: '초기화 중': 'iterator_traits<_Iter>::difference_type (__cdecl *)(_InIt,_InIt,const _Ty &)'에서 'size_t'(으)로 변환할 수 없습니다.
+  mixunit.cpp(6): note: 컨텍스트는 오버로드 함수의 명확성을 고려할 수 없습니다.
+mixunit.cpp(7): error C2065: 'unit_cost': 선언되지 않은 식별자입니다.
+mixunit.cpp(7): error C2440: '초기화 중': 'iterator_traits<_Iter>::difference_type (__cdecl *)(_InIt,_InIt,const _Ty &)'에서 'size_t'(으)로 변환할 수 없습니다.
+  mixunit.cpp(7): note: 컨텍스트는 오버로드 함수의 명확성을 고려할 수 없습니다.
+mixunit.cpp(9): error C3556: 'std::count': 'decltype'의 인수가 잘못되었습니다.
+mixunit.cpp(9): error C2664: 'void __va_start(va_list *,...)': 인수 2을(를) 'iterator_traits<_Iter>::difference_type (__cdecl *)(_InIt,_InIt,const _Ty &)'에서 '...'(으)로 변환할 수 없습니다.
+  mixunit.cpp(9): note: 컨텍스트는 오버로드 함수의 명확성을 고려할 수 없습니다.
+mixunit.cpp(10): error C2563: 정식 매개 변수 목록과 일치하지 않는 항목이 있습니다.
+mixunit.cpp(10): error C2568: '<': 함수 오버로드를 확인할 수 없습니다.
+  mixunit.cpp(10): note: 'iterator_traits<_Iter>::difference_type std::count(_InIt,_InIt,const _Ty &)'일 수 있습니다.
+mixunit.cpp(14): error C2065: 'unit_table': 선언되지 않은 식별자입니다.
+mixunit.cpp(15): error C2597: 비정적 멤버 'mixunit::mixmap'에 대한 참조가 잘못되었습니다.
+  mixunit.cpp(15): note: 'mixunit::mixmap' 선언을 참조하십시오.
+mixunit.cpp(15): error C3867: 'mixunit::mixmap': 비표준 구문입니다. '&'를 사용하여 멤버 포인터를 만드세요.
+mixunit.cpp(15): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+mixunit.cpp(21): error C2601: 'mixunit::viewMaterial': 지역 함수 정의가 잘못되었습니다.
+mixunit.cpp(49): error C2601: 'mixunit::view': 지역 함수 정의가 잘못되었습니다.
+mixunit.cpp(57): error C2601: 'mixunit::getUnitName': 지역 함수 정의가 잘못되었습니다.
+mixunit.cpp(62): error C2601: 'mixunit::getCost': 지역 함수 정의가 잘못되었습니다.
+mixunit.cpp(103): fatal error C1004: 예기치 않은 파일의 끝이 나타났습니다.
+  nrd.cpp
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4311: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 포인터가 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4302: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(31): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'char *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(36): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(41): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(51): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2146: 구문 오류: ';'이(가) 'dwColor' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2146: 구문 오류: ';'이(가) 'Text' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'mov': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2146: 구문 오류: ';'이(가) 'ecx' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'ecx': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C3260: ';': 람다 본문 전에 예상치 않은 토큰을 건너뜁니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(69): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(70): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(76): error C2146: 구문 오류: ';'이(가) 'DWORD' 식별자 앞에 없습니다.
+nrd.cpp(17): error C2601: 'getNormalName': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(22): error C2601: 'getMagicName': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(27): error C2601: 'getNormalValue': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(32): error C2601: 'getMagicValue': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(38): error C2601: 'unitMapView': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(52): error C2601: 'unitMapDel': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(58): error C2601: 'unitMapSet': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(79): error C2601: 'checkUnitType': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(100): error C2601: 'unitCheckGroup': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(127): error C2601: 'unitNormalMagic': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(156): error C2485: 'naked': 확장 특성을 인식할 수 없습니다.
+nrd.cpp(157): error C2601: 'unitHookFunc': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(160): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+nrd.cpp(169): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+nrd.cpp(181): error C2601: 'unitHook': 지역 함수 정의가 잘못되었습니다.
+nrd.cpp(185): fatal error C1004: 예기치 않은 파일의 끝이 나타났습니다.
+  unique.cpp
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4311: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 포인터가 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(26): warning C4302: '형식 캐스팅': 'HMODULE'에서 'DWORD'(으)로 잘립니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(31): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'char *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(36): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(41): warning C4312: '형식 캐스팅': 'DWORD'에서 더 큰 'DWORD *'(으)로의 변환입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(51): error C4235: 비표준 확장이 사용됨: 이 아키텍처에서는 '__asm' 키워드를 사용할 수 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(53): error C2146: 구문 오류: ';'이(가) 'dwColor' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(54): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(55): error C2146: 구문 오류: ';'이(가) 'Text' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(56): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2065: 'push': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(57): error C2143: 구문 오류: ';'이(가) '상수' 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'mov': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2146: 구문 오류: ';'이(가) 'ecx' 식별자 앞에 없습니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C2065: 'ecx': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(58): error C3260: ';': 람다 본문 전에 예상치 않은 토큰을 건너뜁니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(69): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(70): error C2065: 'szText': 선언되지 않은 식별자입니다.
+c:\users\kiyon\documents\visual studio 2015\projects\nrd_util\nrd_util\WarCraft.h(76): error C2146: 구문 오류: ';'이(가) 'DWORD' 식별자 앞에 없습니다.
+unique.cpp(6): error C2601: 'setUnique': 지역 함수 정의가 잘못되었습니다.
+unique.cpp(40): error C2601: 'viewUniqueCost': 지역 함수 정의가 잘못되었습니다.
+unique.cpp(49): error C2951: 템플릿 선언은 전역, 네임스페이스 또는 클래스 범위에서만 허용됩니다.
+unique.cpp(58): error C2601: 'createUnique': 지역 함수 정의가 잘못되었습니다.
+unique.cpp(80): fatal error C1004: 예기치 않은 파일의 끝이 나타났습니다.

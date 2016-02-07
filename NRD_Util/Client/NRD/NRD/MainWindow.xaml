@@ -43,34 +43,56 @@
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        
     </Window.Resources>
 
     <Grid Margin="50,60,50,40">
-
+        
         <ed:Arc x:Name="BackGroundRing" 
-                ArcThickness="5" 
+                ArcThickness="6" 
                 ArcThicknessUnit="Pixel"
                 EndAngle="360" Fill="#FFF"
                 Stretch="None" 
                 StartAngle="0" 
-                StrokeThickness="0"/>
+                StrokeThickness="0">
+            <ed:Arc.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="제작자" Click="makerClick"/>
+                    <MenuItem Header="종료" Click="exitClick"/>
+                </ContextMenu>
+            </ed:Arc.ContextMenu>
+        </ed:Arc>
 
         <ed:Arc x:Name="ForeGroundRing"
-                ArcThickness="5" 
+                ArcThickness="6" 
                 ArcThicknessUnit="Pixel" 
                 EndAngle="0"
                 Fill="#FF31F14B" 
                 Stretch="None"
                 StartAngle="0" 
-                StrokeThickness="0"/>
+                StrokeThickness="0">
+            <ed:Arc.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="제작자" Click="makerClick"/>
+                    <MenuItem Header="종료" Click="exitClick"/>
+                </ContextMenu>
+            </ed:Arc.ContextMenu>
+        </ed:Arc>
 
         <TextBlock x:Name="tbpercent" 
                    TextWrapping="Wrap" 
                    Text="WAR3" 
                    Foreground="White"
-                   FontSize="60"
+                   FontSize="65"
                    HorizontalAlignment="Center" 
-                   VerticalAlignment="Center"/>
+                   VerticalAlignment="Center">
+            <TextBlock.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="제작자" Click="makerClick"/>
+                    <MenuItem Header="종료" Click="exitClick"/>
+                </ContextMenu>
+            </TextBlock.ContextMenu>
+        </TextBlock>
 
     </Grid>
 

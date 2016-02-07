@@ -7,6 +7,7 @@ using System.Windows.Media.Animation;
 using System.Threading;
 using System.Windows.Threading;
 using System.Diagnostics;
+using WinForms = System.Windows.Forms;
 
 namespace NRD
 {
@@ -25,6 +26,7 @@ namespace NRD
             Storyboard sb = (Storyboard)FindResource("startProgressRingStoryBoard");
             sb.Begin();
             t = new Thread(initProcess);
+            t.IsBackground = true;
             t.Start();
 
         }
@@ -41,6 +43,7 @@ namespace NRD
                     sb.Remove();
                     tbpercent.Text = "Find!";
                 }));
+                Thread.Sleep(10000);
                 Injector inject = new Injector();
                 Process proc = Process.GetProcessesByName("war3")[0];
                 string dllPath = AppDomain.CurrentDomain.BaseDirectory +"NRD.dll";
@@ -54,6 +57,16 @@ namespace NRD
         void Window1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void makerClick(object sender, RoutedEventArgs e)
+        {
+            Process.Start("http://blog.naver.com/cheatreal");
+        }
+
+        private void exitClick(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
         
     }
