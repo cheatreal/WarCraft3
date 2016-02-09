@@ -25,6 +25,8 @@ void __stdcall HotKeyRoutine()
 			unitMapDel();
 			Sleep(1000); 
 			setUnique();
+			setLegendary();
+			setHidden();
 			unitHook();
 			nrdMapCheck = strstr(getMapName(), "15-12-20-nrd3.8f-fix3");
 			WarCraftPrintText(u8"|CFFFAFF21Status : |R   |CFFFF0000ON|R");
@@ -34,19 +36,30 @@ void __stdcall HotKeyRoutine()
 		}
 		else if (!GameCheck() && !count)
 		{
-			nrdMapCheck = 0;
 			count = TRUE;
 		}
 
-		if (nrdMapCheck && GetAsyncKeyState(VIEW))
+		if (nrdMapCheck && GetAsyncKeyState(VIEWUNIQUE))
 		{
-			//keyNormal();
 			createUnique();
-			while (GetAsyncKeyState(VIEW))
+			while (GetAsyncKeyState(VIEWUNIQUE))
 				Sleep(100);
 
 		}
+		if (nrdMapCheck && GetAsyncKeyState(VIEWLEGENDARY))
+		{
+			createLegendary();
+			while (GetAsyncKeyState(VIEWLEGENDARY))
+				Sleep(100);
 
+		}
+		if (nrdMapCheck && GetAsyncKeyState(VIEWHIDDEN))
+		{
+			createHidden();
+			while (GetAsyncKeyState(VIEWHIDDEN))
+				Sleep(100);
+
+		}
 		Sleep(100);
 	}
 

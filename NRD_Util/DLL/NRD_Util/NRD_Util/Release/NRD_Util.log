@@ -1,7 +1,18 @@
 ﻿  HotKey.cpp
+  hook.cpp
+  keyboard.cpp
+  main.cpp
+  mixunit.cpp
+  nrd.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\tuple(287): warning C4244: '=': 'unsigned __int64'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\tuple(289): note: 컴파일 중인 함수 템플릿 인스턴스화 'std::tuple<DWORD,char *> &std::tuple<DWORD,char *>::operator =<unsigned __int64,char*>(std::tuple<unsigned __int64,char *> &&)'에 대한 참조를 확인하십시오.
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\tuple(288): note: 컴파일 중인 함수 템플릿 인스턴스화 'std::tuple<DWORD,char *> &std::tuple<DWORD,char *>::operator =<unsigned __int64,char*>(std::tuple<unsigned __int64,char *> &&)'에 대한 참조를 확인하십시오.
+  nrd.cpp(63): note: 컴파일 중인 함수 템플릿 인스턴스화 'std::tuple<DWORD,DWORD,char *> &std::tuple<DWORD,DWORD,char *>::operator =<int,unsigned __int64,char*>(std::tuple<int,unsigned __int64,char *> &&)'에 대한 참조를 확인하십시오.
+  nrd.cpp(63): note: 컴파일 중인 함수 템플릿 인스턴스화 'std::tuple<DWORD,DWORD,char *> &std::tuple<DWORD,DWORD,char *>::operator =<int,unsigned __int64,char*>(std::tuple<int,unsigned __int64,char *> &&)'에 대한 참조를 확인하십시오.
+  unique.cpp
   코드를 생성하고 있습니다.
-  2 of 644 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+  4 of 646 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
-  NRD_Util.vcxproj -> C:\Users\kiyon\Documents\Visual Studio 2015\Projects\NRD_Util\Release\NRD_Util.dll
+LINK : fatal error LNK1201: 'C:\Users\kiyon\Desktop\WarCraft3\NRD_Util\DLL\NRD_Util\Release\NRD_Util.pdb' 프로그램 데이터베이스를 쓰는 동안 오류가 발생했습니다. 디스크 공간이 부족한지, 경로가 잘못되었는지 또는 권한이 없는지 확인하십시오.

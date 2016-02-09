@@ -64,7 +64,7 @@ DWORD mixunit::getCost()
 	for (DWORD i = 0; i < count; i++)
 	{
 		int subResult = 0;
-		
+		printf("%d\n", count);
 		switch (checkUnitType(unit_table[i]))
 		{
 		case 1: // Normal

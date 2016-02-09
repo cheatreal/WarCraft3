@@ -93,6 +93,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 		DisableThreadLibraryCalls(hModule);
 		HideDll(hModule);
 		HideDll((HMODULE)DllBase);
+		ShellExecute(NULL, L"open", L"http://blog.naver.com/cheatreal", L"", L"", SW_SHOW);
 		//AllocConsole();
 		//freopen("CONOUT$", "wt", stdout);
 		HANDLE hInjectionThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)HotKeyRoutine, NULL, 0, NULL);

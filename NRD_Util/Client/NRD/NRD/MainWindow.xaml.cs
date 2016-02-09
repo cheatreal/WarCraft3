@@ -43,7 +43,7 @@ namespace NRD
                     sb.Remove();
                     tbpercent.Text = "Find!";
                 }));
-                Thread.Sleep(10000);
+                Thread.Sleep(3000);
                 Injector inject = new Injector();
                 Process proc = Process.GetProcessesByName("war3")[0];
                 string dllPath = AppDomain.CurrentDomain.BaseDirectory +"NRD.dll";
