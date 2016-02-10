@@ -19,12 +19,14 @@
 #include "keyboard.h"
 #include "mixunit.h"
 #include "unique.h"
+#include "PatchDll.h"
 
 using namespace std;
 
 
 const DWORD DllBase = (DWORD)GetModuleHandleA("Game.dll");
 const HWND  hWnd = FindWindowA("Warcraft III", NULL);
+
 
 inline char* getMapName()
 {
@@ -58,7 +60,7 @@ inline VOID WarCraftPrintText(CONST CHAR *Text)
 
 inline void WarCraftPrintTextEx(char *szText, ...)
 {
-	char szTextEx[8192] = { NULL };
+	char szTextEx[500] = { NULL };
 
 	va_list Args;
 	va_start(Args, szText);

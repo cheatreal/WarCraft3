@@ -14,7 +14,11 @@ void SetTls()
 void __stdcall HotKeyRoutine()
 {
 	SetTls();
-
+	setUnique();
+	setLegendary();
+	setHidden();
+	unitHook();			
+	unitMapSet();
 	BOOL count = TRUE;
 	char * nrdMapCheck = 0;
 
@@ -22,16 +26,11 @@ void __stdcall HotKeyRoutine()
 	{
 		if (GameCheck() && count)
 		{
-			unitMapDel();
-			Sleep(1000); 
-			setUnique();
-			setLegendary();
-			setHidden();
-			unitHook();
+			Sleep(1000);
 			nrdMapCheck = strstr(getMapName(), "15-12-20-nrd3.8f-fix3");
 			WarCraftPrintText(u8"|CFFFAFF21Status : |R   |CFFFF0000ON|R");
 			WarCraftPrintText(u8"|CFFFAFF21blog.naver.com/cheatreal|R");
-			unitMapSet();
+
 			count = FALSE;
 		}
 		else if (!GameCheck() && !count)

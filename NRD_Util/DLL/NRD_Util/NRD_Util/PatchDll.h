@@ -1,0 +1,1 @@
+VOID PatchDll(DWORD addr, LPCVOID opcode, DWORD bytes);

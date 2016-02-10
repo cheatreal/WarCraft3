@@ -125,26 +125,26 @@ DWORD unitCheckGroup(DWORD64 *check)
 
 void unitNormalMagic(DWORD *point)
 {
-	DWORD64 *check;
-
-	point = (DWORD*)((DWORD)point + 0x8);
-	point = (DWORD*)((*point) + 0x1c);
-	check = (DWORD64 *)*point;
+	DWORD64 *check = 0;
+	DWORD * temp = point;
+	temp = (DWORD*)((DWORD)temp + 0x8);
+	temp = (DWORD*)((*temp) + 0x1c);
+	check = (DWORD64 *)*temp;
 
 	switch (unitCheckGroup(check))
 	{
 	case 0:
 		if(*(check+1) == SASUKE1_CHECK)
 		{
-			magic[SASUKE1] = make_tuple(atoi((const char*)(*point + (get<1>(magic[SASUKE1])))), get<1>(magic[SASUKE1]), get<2>(magic[SASUKE1]));
+			magic[SASUKE1] = make_tuple(atoi((const char*)(*temp + (get<1>(magic[SASUKE1])))), get<1>(magic[SASUKE1]), get<2>(magic[SASUKE1]));
 		}
 		break;
 	case 1:
-		normal[*check] = make_tuple(atoi((const char*)(*point + get<1>(normal[*check]))), get<1>(normal[*check]), get<2>(normal[*check]));
+		normal[*check] = make_tuple(atoi((const char*)(*temp + get<1>(normal[*check]))), get<1>(normal[*check]), get<2>(normal[*check]));
 		break;
 	case 2:
 		check = (DWORD64 *)((DWORD)check + 0xa);
-		magic[*check] = make_tuple(atoi((const char*)(*point + (get<1>(magic[*check])))), get<1>(magic[*check]), get<2>(magic[*check]));
+		magic[*check] = make_tuple(atoi((const char*)(*temp + (get<1>(magic[*check])))), get<1>(magic[*check]), get<2>(magic[*check]));
 		break;
 	default:
 		return;
@@ -181,4 +181,5 @@ void unitHook()
 {
 	Hook hc;
 	hc.AddrHook(DllBase + 0x3cb910, (PROC)unitHookFunc);
+	PatchDll(DllBase + 0x7E105F, "\x90\x90", 2);
 }
